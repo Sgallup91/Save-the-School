@@ -109,7 +109,7 @@ function makeChoice(choice) {
     outcomeDiv.style.animation = "popIn 1s forwards";
 
     // Check for game-ending conditions
-    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0 || studentEnrollment <= 1000) {
+    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0) {
         outcomeDiv.textContent = "Game over! The university has failed!";
         disableButtons();
     }
