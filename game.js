@@ -6,7 +6,7 @@ let facultyMorale = 80;
 let alumniSatisfaction = 80;
 let donations = 500000;
 let accreditation = "Good";
-let studentEnrollment = 1000;
+let studentEnrollment = 5000;
 
 const outcomes = {
     1: {
@@ -20,43 +20,44 @@ const outcomes = {
     2: {
         message: "You raised tuition fees for incoming students.",
         fundsChange: 2000000,
-        studentSatisfactionChange: -5,
-        reputationChange: -3,
-        facultyMoraleChange: -2
+        studentSatisfactionChange: -10,
+        reputationChange: -10,
+        facultyMoraleChange: -5
     },
     3: {
         message: "You reduced faculty salaries.",
         fundsChange: 500000,
         studentSatisfactionChange: -15,
         reputationChange: -10,
-        facultyMoraleChange: -20
+        facultyMoraleChange: -25
     },
     4: {
         message: "You launched a fundraising campaign.",
         fundsChange: 3000000,
-        alumniSatisfactionChange: -10,
-        donationsChange: 2000000
+        alumniSatisfactionChange: -15,
+        donationsChange: 3000000
     },
     5: {
         message: "You invested in marketing and recruitment.",
-        fundsChange: -1000000,
+        fundsChange: -2000000,
         studentSatisfactionChange: 5,
         reputationChange: 3,
-        facultyMoraleChange: 2
+        facultyMoraleChange: 2,
+        studentEnrollmentChange: 500
     },
     6: {
         message: "You upgraded campus facilities.",
-        fundsChange: -2000000,
+        fundsChange: -3000000,
         studentSatisfactionChange: 10,
         reputationChange: 5,
         facultyMoraleChange: 3
     },
     7: {
-        message: "You decided to cut a women's sports program to save money.",
+        message: "You decided to cut a sports program to save money.",
         fundsChange: 500000,
-        studentSatisfactionChange: -20,
+        studentSatisfactionChange: -30,
         reputationChange: -30,
-        facultyMoraleChange: -10,
+        facultyMoraleChange: -20,
         accreditationChange: "Risk"
     },
     8: {
@@ -68,11 +69,11 @@ const outcomes = {
     },
     9: {
         message: "You invested in upgrading the university's technology infrastructure.",
-        fundsChange: -1500000,
+        fundsChange: -3500000,
         studentSatisfactionChange: 15,
         reputationChange: 8,
         facultyMoraleChange: 5,
-        studentEnrollmentChange: 50
+        studentEnrollmentChange: 100
     }
 };
 
@@ -108,7 +109,7 @@ function makeChoice(choice) {
     outcomeDiv.style.animation = "popIn 1s forwards";
 
     // Check for game-ending conditions
-    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0) {
+    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0 ||  studentEnrollment <= 1000) {
         outcomeDiv.textContent = "Game over! The university has failed!";
         disableButtons();
     }
