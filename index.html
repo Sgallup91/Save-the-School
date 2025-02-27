@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Crisis: Save the School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>University Crisis: Save the School</h1>
+        <p>Can you manage the finances of a university facing closure or merger? Make strategic decisions to save the university!</p>
+    </header>
+    <section id="game">
+        <div id="game-board">
+            <div id="choices">
+                <button class="decision-btn" onclick="makeChoice(1)">Cut an Academic Program</button>
+                <button class="decision-btn" onclick="makeChoice(2)">Raise Tuition</button>
+                <button class="decision-btn" onclick="makeChoice(3)">Reduce Faculty Salaries</button>
+                <button class="decision-btn" onclick="makeChoice(4)">Fundraising Campaign</button>
+                <button class="decision-btn" onclick="makeChoice(5)">Invest in Marketing</button>
+                <button class="decision-btn" onclick="makeChoice(6)">Upgrade Campus Facilities</button>
+                <button class="decision-btn" onclick="makeChoice(7)">Cut a Women's Sports Program</button>
+                <button class="decision-btn" onclick="makeChoice(8)">Increase Research Funding</button>
+                <button class="decision-btn" onclick="makeChoice(9)">Invest in Technology</button>
+            </div>
+            <div id="outcome"></div>
+            <div id="score">
+                <h2>Current Funds: $<span id="funds">10,000,000</span></h2>
+                <h2>Student Satisfaction: <span id="satisfaction">75</span>%</h2>
+                <h2>Reputation: <span id="reputation">70</span>%</h2>
+                <h2>Faculty Morale: <span id="facultyMorale">80</span>%</h2>
+                <h2>Alumni Satisfaction: <span id="alumniSatisfaction">80</span>%</h2>
+                <h2>Donations: $<span id="donations">500,000</span></h2>
+                <h2>Accreditation Status: <span id="accreditation">Good</span></h2>
+                <h2>Student Enrollment: <span id="enrollment">1,000</span> students</h2>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Game created by [Your Name].</p>
+    </footer>
+    <script src="game.js"></script>
+</body>
+</html>
