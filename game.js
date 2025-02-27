@@ -6,7 +6,7 @@ let facultyMorale = 80;
 let alumniSatisfaction = 80;
 let donations = 500000;
 let accreditation = "Good";
-let studentEnrollment = 5000;
+let studentEnrollment = 5,000;
 
 const outcomes = {
     1: {
@@ -59,7 +59,6 @@ const outcomes = {
         reputationChange: -30,
         facultyMoraleChange: -20,
         accreditationChange: "Risk"
-        studentEnrollmentChange: -100
     },
     8: {
         message: "You secured a large research grant to boost revenue.",
