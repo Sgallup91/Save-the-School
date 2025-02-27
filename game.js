@@ -80,7 +80,7 @@ const outcomes = {
 // Function to handle choices
 function makeChoice(choice) {
     const outcome = outcomes[choice];
-    
+
     funds += outcome.fundsChange || 0;
     studentSatisfaction += outcome.studentSatisfactionChange || 0;
     reputation += outcome.reputationChange || 0;
@@ -91,7 +91,18 @@ function makeChoice(choice) {
 
     if (outcome.accreditationChange === "Risk") {
         accreditation = "At Risk";
+    } else if (outcome.accreditationChange) {
+        accreditation = outcome.accreditationChange;
     }
+
+    // Ensure values do not go below 0
+    funds = Math.max(funds, 0);
+    studentSatisfaction = Math.max(studentSatisfaction, 0);
+    reputation = Math.max(reputation, 0);
+    facultyMorale = Math.max(facultyMorale, 0);
+    alumniSatisfaction = Math.max(alumniSatisfaction, 0);
+    donations = Math.max(donations, 0);
+    studentEnrollment = Math.max(studentEnrollment, 0);
 
     // Update UI with new values
     document.getElementById("funds").textContent = funds.toLocaleString();
