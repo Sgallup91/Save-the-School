@@ -6,7 +6,7 @@ let facultyMorale = 80;
 let alumniSatisfaction = 80;
 let donations = 500000;
 let accreditation = "Good";
-let studentEnrollment = 5,000;
+let studentEnrollment = 5000;
 
 const outcomes = {
     1: {
