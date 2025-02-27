@@ -59,6 +59,7 @@ const outcomes = {
         reputationChange: -30,
         facultyMoraleChange: -20,
         accreditationChange: "Risk"
+        studentEnrollmentChange: -100
     },
     8: {
         message: "You secured a large research grant to boost revenue.",
@@ -109,7 +110,7 @@ function makeChoice(choice) {
     outcomeDiv.style.animation = "popIn 1s forwards";
 
     // Check for game-ending conditions
-    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0 ||  studentEnrollment <= 1000) {
+    if (funds <= 0 || studentSatisfaction <= 0 || reputation <= 0 || facultyMorale <= 0 || studentEnrollment <= 1000) {
         outcomeDiv.textContent = "Game over! The university has failed!";
         disableButtons();
     }
