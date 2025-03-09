@@ -16,7 +16,7 @@ const outcomes = {
         reputationChange: -5,
         facultyMoraleChange: -5,
         accreditationChange: "Risk",
-        studentEnrollmentChange: -300
+        studentEnrollmentChange: -300  // Decreases by 300
     },
     2: {
         message: "You raised tuition fees for incoming students.",
@@ -24,7 +24,7 @@ const outcomes = {
         studentSatisfactionChange: -10,
         reputationChange: -10,
         facultyMoraleChange: -5,
-        studentEnrollmentChange: -500
+        studentEnrollmentChange: -500  // Decreases by 500
     },
     3: {
         message: "You reduced faculty salaries.",
@@ -38,7 +38,7 @@ const outcomes = {
         fundsChange: 3000000,
         alumniSatisfactionChange: -15,
         donationsChange: 3000000,
-        reputationChange: -10
+        reputationChange: -10  // Reputation decreases by 10
     },
     5: {
         message: "You invested in marketing and recruitment.",
@@ -59,10 +59,10 @@ const outcomes = {
         message: "You decided to cut a sports program to save money.",
         fundsChange: 500000,
         studentSatisfactionChange: -30,
-        reputationChange: -30,
+        reputationChange: -30,  // Reputation decreases by 30
         facultyMoraleChange: -20,
         accreditationChange: "Risk",
-        studentEnrollmentChange: -100
+        studentEnrollmentChange: -100  // Decreases by 100
     },
     8: {
         message: "You secured a large research grant to boost revenue.",
