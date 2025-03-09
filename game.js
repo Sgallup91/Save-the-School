@@ -15,14 +15,16 @@ const outcomes = {
         studentSatisfactionChange: -10,
         reputationChange: -5,
         facultyMoraleChange: -5,
-        accreditationChange: "Risk"
+        accreditationChange: "Risk",
+        studentEnrollmentChange: -300
     },
     2: {
         message: "You raised tuition fees for incoming students.",
         fundsChange: 2000000,
         studentSatisfactionChange: -10,
         reputationChange: -10,
-        facultyMoraleChange: -5
+        facultyMoraleChange: -5,
+        studentEnrollmentChange: -500
     },
     3: {
         message: "You reduced faculty salaries.",
@@ -35,7 +37,8 @@ const outcomes = {
         message: "You launched a fundraising campaign.",
         fundsChange: 3000000,
         alumniSatisfactionChange: -15,
-        donationsChange: 3000000
+        donationsChange: 3000000,
+        reputationChange: -10
     },
     5: {
         message: "You invested in marketing and recruitment.",
@@ -58,7 +61,8 @@ const outcomes = {
         studentSatisfactionChange: -30,
         reputationChange: -30,
         facultyMoraleChange: -20,
-        accreditationChange: "Risk"
+        accreditationChange: "Risk",
+        studentEnrollmentChange: -100
     },
     8: {
         message: "You secured a large research grant to boost revenue.",
