@@ -139,7 +139,6 @@ function disableButtons() {
 // Merge function that doubles all the starting values
 function merge() {
     funds *= 2;
-    studentSatisfaction *= 2;
     donations *= 2;
     studentEnrollment *= 2;
 
