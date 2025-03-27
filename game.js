@@ -135,3 +135,23 @@ function disableButtons() {
     const buttons = document.querySelectorAll(".decision-btn");
     buttons.forEach(button => button.disabled = true);
 }
+
+// Merge function that doubles all the starting values
+function merge() {
+    funds *= 2;
+    studentSatisfaction *= 2;
+    reputation *= 2;
+    facultyMorale *= 2;
+    alumniSatisfaction *= 2;
+    donations *= 2;
+    studentEnrollment *= 2;
+
+    // Update the UI with doubled values
+    document.getElementById("funds").textContent = funds.toLocaleString();
+    document.getElementById("satisfaction").textContent = studentSatisfaction;
+    document.getElementById("reputation").textContent = reputation;
+    document.getElementById("facultyMorale").textContent = facultyMorale;
+    document.getElementById("alumniSatisfaction").textContent = alumniSatisfaction;
+    document.getElementById("donations").textContent = donations.toLocaleString();
+    document.getElementById("enrollment").textContent = studentEnrollment.toLocaleString();
+}
