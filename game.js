@@ -155,3 +155,6 @@ function merge() {
     document.getElementById("donations").textContent = donations.toLocaleString();
     document.getElementById("enrollment").textContent = studentEnrollment.toLocaleString();
 }
+
+// Add the Merge button functionality to the HTML
+document.getElementById("merge-btn").addEventListener("click", merge);
