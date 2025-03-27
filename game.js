@@ -77,7 +77,8 @@ const outcomes = {
         studentSatisfactionChange: 15,
         reputationChange: 8,
         facultyMoraleChange: 5,
-        studentEnrollmentChange: 100
+        studentEnrollmentChange: 100,
+        accreditationChange: "Good" // Reset accreditation to "Good"
     }
 };
 
@@ -95,6 +96,8 @@ function makeChoice(choice) {
 
     if (outcome.accreditationChange === "Risk") {
         accreditation = "At Risk";
+    } else if (outcome.accreditationChange === "Good") {
+        accreditation = "Good"; // Reset accreditation to "Good"
     } else if (outcome.accreditationChange) {
         accreditation = outcome.accreditationChange;
     }
@@ -136,8 +139,12 @@ function disableButtons() {
     buttons.forEach(button => button.disabled = true);
 }
 
-// Merge function that doubles all the starting values
+// Merge function that doubles all the starting values and disables the button after use
+let mergeUsed = false;
+
 function merge() {
+    if (mergeUsed) return; // Prevent further merges after first use
+
     funds *= 2;
     donations *= 2;
     studentEnrollment *= 2;
@@ -150,6 +157,10 @@ function merge() {
     document.getElementById("alumniSatisfaction").textContent = alumniSatisfaction;
     document.getElementById("donations").textContent = donations.toLocaleString();
     document.getElementById("enrollment").textContent = studentEnrollment.toLocaleString();
+
+    // Mark merge as used and disable the merge button
+    mergeUsed = true;
+    document.getElementById("merge-btn").disabled = true;
 }
 
 // Add the Merge button functionality to the HTML
