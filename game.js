@@ -140,9 +140,6 @@ function disableButtons() {
 function merge() {
     funds *= 2;
     studentSatisfaction *= 2;
-    reputation *= 2;
-    facultyMorale *= 2;
-    alumniSatisfaction *= 2;
     donations *= 2;
     studentEnrollment *= 2;
 
